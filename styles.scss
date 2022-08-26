@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
 //fonts
 $font-family-sans-serif: 'DM Sans', sans-bold !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
@@ -21,20 +25,25 @@ $container-max-widths: (
   xxl: 1320px
 );
 
-//colors
-$primary: #001d4d;
-$secondary: #363e4d;
-$warning: #FFB100;
+//Create your own map
+$custom-colors: (
+  "primary": #001D4D,
+  "secondary": #363E4D,
+  "secondary-dark": #000E26,
+  "tertiary-blue": #013283,
+  "tertiary-green": #52CC5E,
+  "tertiary-green-dark": #13741D,
+  "light": #FFFFFF,
+  "neutral-100": #C4C4C4,
+  "neutral-200": #8C8C8C,
+  "neutral-300": #808080,
+  "action": #FFB100,
+  "link": #004ECE,
+  "error": #ED1414,
+);
 
-
-
-// // // Create your own map
-// $custom-colors: (
-//   "custom-color": #900
-// );
-
-// // // Merge the maps
-// $theme-colors: map-merge($theme-colors, $custom-colors);
+//Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss"
